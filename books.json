@@ -1,1 +1,16 @@
-{"books":[{"bid":1,"bname":"test","author":"rest","year":"2001"}]}
+{
+    "books": [
+        {
+            "bid": 1,
+            "bname": "test",
+            "author": "rest",
+            "year": "2001"
+        },
+        {
+            "bid": 3,
+            "bname": "Harry Potter",
+            "author": "JK Rowling",
+            "year": "2001"
+        }
+    ]
+}
