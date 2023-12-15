@@ -1,6 +1,6 @@
 <?php
 $USERNAME = "root";
-$PASSWORD = "hakdog2001";
+$PASSWORD = ""; // change this with your actual pass
 $HOSTNAME = "localhost";
 $DATABASE = "books";
 $DB = new mysqli($HOSTNAME, $USERNAME, $PASSWORD, $DATABASE);
