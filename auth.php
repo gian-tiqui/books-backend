@@ -18,22 +18,24 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $stmt->bind_param("ss", $email, $password);
 
   if ($stmt->execute()) {
-      $result = $stmt->get_result();
+
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
       while ($row = $result->fetch_assoc()) {
-          $user[] = $row;
+        $user[] = $row;
       }
 
-      echo json_encode($user);  
-  } else {
+      echo json_encode($user);
+    } else {
       echo "failed";
+    }
+  } else {
+    echo "failed";
   }
 
   $stmt->close();
 }
 
-
-$DB->close();  
-?>
-
-
+$DB->close();
 ?>
